@@ -10,7 +10,7 @@ The management library allows Create, Read, Update, and Delete operations on the
 
 ## Prerequisites
 
-In order to get started using the Service Bus management libraries, you must authenticate with Azure Active Directory (AAD). AAD requires that you authenticate as a Service Principal which provides access to your Azure resources. For information on creating a Service Principal follow one of these articles:  
+In order to get started using the Event Hub management libraries, you must authenticate with Azure Active Directory (AAD). AAD requires that you authenticate as a Service Principal which provides access to your Azure resources. For information on creating a Service Principal follow one of these articles:  
 
 * [Use the Azure Portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)
 * [Use Azure PowerShell to create a service principal to access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authenticate-service-principal)
@@ -41,7 +41,7 @@ In order to use the `Microsoft.Azure.Management.EventHub` package, you will also
 
 ## Programming pattern
 
-The pattern to manipulate any Service Bus resource is similar and follows a common protocol:
+The pattern to manipulate any Event Hubs resource is similar and follows a common protocol:
 
 1. Obtain a token from Azure Active Directory using the `Microsoft.IdentityModel.Clients.ActiveDirectory` library
     ```csharp
