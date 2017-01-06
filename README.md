@@ -72,5 +72,5 @@ The pattern to manipulate any Service Bus resource is similar and follows a comm
 
 1. Execute the call
     ```csharp
-    await sbClient.Queues.CreateOrUpdateAsync(resourceGroupName, namespaceName, QueueName, queueParams);
+    await ehClient.EventHubs.CreateOrUpdateAsync(resourceGroupName, namespaceName, EventHubName, ehParams);
     ```
