@@ -93,7 +93,7 @@ namespace event_hub_dotnet_management
 					SubscriptionId = SettingsCache["SubscriptionId"]
 				};
 
-				var namespaceParams = new NamespaceCreateOrUpdateParameters()
+				var namespaceParams = new EHNamespace()
 				{
 					Location = SettingsCache["DataCenterLocation"]
 				};
@@ -127,10 +127,7 @@ namespace event_hub_dotnet_management
 					SubscriptionId = SettingsCache["SubscriptionId"]
 				};
 
-				var ehParams = new EventHubCreateOrUpdateParameters()
-				{
-					Location = SettingsCache["DataCenterLocation"]
-				};
+				var ehParams = new Eventhub(){};
 
 				Console.WriteLine("Creating Event Hub...");
 				await ehClient.EventHubs.CreateOrUpdateAsync(resourceGroupName, namespaceName, EventHubName, ehParams);
@@ -161,10 +158,7 @@ namespace event_hub_dotnet_management
 					SubscriptionId = SettingsCache["SubscriptionId"]
 				};
 
-				var consumerGroupParams = new ConsumerGroupCreateOrUpdateParameters()
-				{
-					Location = SettingsCache["DataCenterLocation"]
-				};
+				var consumerGroupParams = new ConsumerGroup(){};
 
 				Console.WriteLine("Creating Consumer Group...");
 				await ehClient.ConsumerGroups.CreateOrUpdateAsync(resourceGroupName, namespaceName, EventHubName, ConsumerGroupName, consumerGroupParams);
